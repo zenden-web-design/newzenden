@@ -1,10 +1,82 @@
+/* =======[ general ]======= */
+
 html {
 	font-size: 100%;
-	font-family: $sans-serif;
+	font-family: $body;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $header-bold;
 }
 a {
 	text-decoration: none;
 }
+
+.social {
+	li {
+		@include transition(all, 0.3s, ease-in-out);
+		
+		display: inline-block;
+		width: 34px;
+		height: 34px;
+		background: $darkgrey;
+		text-align: center;
+		margin-right: 6px;
+		
+		> a {
+			font-family: $icon !important;
+			color: $white;
+			display: block;
+			height: 100%;
+			padding-top: 10px;
+		}
+		&:hover {
+			background: $green;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+hgroup.pagehead {
+	border-top: 1px solid #DDD;
+	border-bottom: 1px solid #DDD;
+	margin-bottom: 30px;
+	position: relative;
+	margin-right: -100px;
+	padding-right: 100px;
+	
+	h1, h2 {
+		text-transform: uppercase;
+	}
+	h1 {
+		@include font-size(2);
+		
+		line-height: 2.1;
+		padding-top: 10px;
+		color: lighten($bodytext, 30);
+	}
+	h2 {
+		@include font-size(.8);
+		
+		font-family: $header-light;
+		color: lighten($bodytext, 40);
+		margin-top: -10px;
+		display: inline-block;
+		position: absolute;
+		padding-right: 10px;
+		top: 4px;
+		left: 0;
+		background: $white;
+	}
+}
+
+.menu-trigger,
+.video-ex {
+	@include pointer;
+}
+
+/* =======[ layout ]======= */
 
 .content {
 	@include transition(border, 0.3s, ease-in-out);
@@ -14,24 +86,55 @@ a {
 	
 	article.content-block {
 		h1 {
-			color: $light;
-			font-size: 2.3rem;
-			line-height: 5.3rem;
+			@include font-size(2.3);
+			
+			color: $bodytext;
 		}
 		p {
-			color: darken($light, 5%);
-			margin-bottom: 1rem;
-			line-height: 1.62rem;
-			font-size: .9rem;
+			@include font-size(1);
+			
+			font-weight: 300;
+			color: $bodytext;
+			margin-bottom: 16px;
+			line-height: 1.7;
+		}
+		strong {
+			font-weight: 600;
+		}
+		blockquote {
+			background: lighten($blue, 5);
+			margin: 30px -100%;
+			padding: 70px 100%;
+			
+			p {
+				@include font-size(2);
+				
+				font-weight: 100;
+				color: $white;
+				position: relative;
+				padding-left: 35px;
+				margin-bottom: 0;
+				
+				&:before {
+					@include font-size(2.5);
+					
+					font-family: $icon;
+					content: '\f10d';
+					position: absolute;
+					left: -30px;
+					top: -20px;
+					color: rgba(0,0,0,0.4);
+				}
+			}
 		}
 
 		img.fullwidth {
-			margin: 1rem -4rem;
+			margin: 16px -64px;
 			max-width: 133%;
 			
 			// media queries
 			@include breakpoint($medium) {
-				margin: 1rem 0;
+				margin: 16px 0;
 				max-width: 100%;
 			}
 		}
@@ -41,14 +144,16 @@ a {
 			width: 100%;
 			height: auto;
 			overflow-y: auto;
-			padding: 2rem 90px 4rem;
+			padding: 32px 90px 64px;
 		}
 		@include breakpoint($small) {
-			padding: 2rem 2rem 4rem;
+			padding: 32px 32px 64px;
 		}
-	}// /article.content-block
+	}// END article.content-block
+	
 	
 	/* =======[ two-column content ]======= */
+	
 	.two-column {
 		height: 100%;
 	
@@ -60,19 +165,8 @@ a {
 			position: fixed;
 			left: 0;
 			top: 0;
-			background: rgba(0,0,0,0.2);
-
-			p.standin-text {
-				color: rgba(255, 255, 255, 0.2);
-				font-size: 5rem;
-				text-align: center;
-				display: inline-block;
-				position: absolute;
-				left: 50%;
-				top: 50%;
-				margin: -40px 0 0 -124px;
-				@include transition(all, 0.3s, ease-in-out);
-			}
+			background-image: url('../../img/standin-sidebg.jpg');
+			background-size: cover;
 			
 			// media queries
 			@include breakpoint($medium) {
@@ -80,13 +174,13 @@ a {
 				height: 300px;
 				position: relative;
 			}
-		}// /aside.side-image
+		}// END aside.side-image
 		
 		article.content-block {
 			@include content-column-right;
 
 			height: 100%;
-			padding: 4rem;
+			padding: 64px;
 			overflow-x: hidden;
 			overflow-y: scroll;
 			
@@ -95,34 +189,37 @@ a {
 				width: 100%;
 				height: auto;
 				overflow-y: auto;
-				padding: 2rem 90px 4rem;
+				padding: 32px 90px 64px;
 			}
 			@include breakpoint($small) {
-				padding: 2rem 2rem 4rem;
+				padding: 32px 32px 64px;
 			}
-		}// /article.content-block
-	}// /two-column
+		}// END article.content-block
+	}// END .two-column
+	
 	
 	/* =======[ full width content ]======= */
+	
 	.full-width {
 		height: 100%;
 		
 		article.content-block {
 			height: 100%;
-			padding: 4rem 6rem;
+			padding: 64px 96px;
 			
 			// media queries
 			@include breakpoint($medium) {
 				width: 100%;
 				height: auto;
 				overflow-y: auto;
-				padding: 4rem 90px 4rem;
+				padding: 64px 90px 64px;
 			}
 			@include breakpoint($small) {
-				padding: 5rem 2rem 4rem;
+				padding: 80px 32px 64px;
 			}
-		}
-	}
+		}// END article.content-block
+	}// END .full-width
+	
 	
 	/* =======[ video background ]======= */
 
@@ -131,6 +228,8 @@ a {
 		display: table;
 
 		a.video-ex {
+			@include font-size(1.6);
+			
 			position: absolute;
 			top: 0;
 			right: 0;
@@ -140,13 +239,13 @@ a {
 			border: none;
 			color: $light;
 			text-align: center;
-			line-height: 4.5rem;
-			font-size: 1.6rem;
+			line-height: 2.7;
 			z-index: 100;
 		}
 		p.standin-text {
-			color: rgba(255, 255, 255, 0.2);
-			font-size: 5rem;
+			@include font-size(5);
+			
+			color: rgba(255, 255, 255, 0.05);
 			text-align: center;
 			display: inline-block;
 			position: absolute;
@@ -158,7 +257,7 @@ a {
 		div.text-overlay {
 			position: absolute;
 			top: 50%;
-			margin-top: -107px;
+			margin-top: -140px;
 			width: 100%;
 			display: table-cell;
 			vertical-align: middle;
@@ -169,21 +268,29 @@ a {
 			transition-delay: 0.2s;
 			
 
-			h1 {
-				font-size: 4rem;
-				color: $light;
-				line-height: 6rem;
+			img.logo {
+				width: 400px;
+				margin-bottom: 20px;
 			}
 			p {
+				@include font-size(1.3);
+				
+				font-weight: 300;
+				line-height: 1.7;
 				color: darken($light, 20%);
-				padding-bottom: 3rem;
-				font-size: 1.3rem;
+				padding-bottom: 48px;
+				width: 600px;
+				margin: 0 auto;
 			}
 			a {
 				@include ghost-button($light, $dark, $light);
+				
+				&:last-child {
+					margin-left: 20px !important;
+				}
 			}
 		}
-	}
+	}// END .video
 	.video.video-expanded {
 		p.standin-text {
 			color: rgba(255, 255, 255, 1);
@@ -200,7 +307,7 @@ a {
 			z-index: -1;
 		}
 	}
-}
+}// END .content
 
 
 /* =======[ page transitions ]======= */
@@ -231,7 +338,7 @@ a {
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
-	background: #34495E;
+	background: $white;
 }
 
 .pt-page-current,
@@ -282,7 +389,7 @@ a {
   display: block;
   position: fixed;
   z-index: 2000;
-  top: 15px;
+  bottom: 15px;
   right: 15px;
   width: 14px;
   height: 14px;

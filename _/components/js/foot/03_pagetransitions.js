@@ -1,7 +1,6 @@
 /* =======[ PAGE TRANSITIONS ]======= */
 
 /* a.outlink */
-		
 var pageTransitions = (function() {
 
 	var $main = $( '#pt-main' ),

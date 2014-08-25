@@ -37,6 +37,14 @@
 }
 
 
+/* =======[ typography ]======= */
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+
 /* =======[ layout ]======= */
 
 @mixin full-screen {
@@ -61,7 +69,9 @@
 	color: $color;
 	border: 1px solid $color;
 	display: inline-block;
-	padding: 1rem 2rem;
+	padding: 16px 32px;
+	text-transform: uppercase;
+	font-family: $header-bold;
 	
 	&:hover {
 		@include transition(all, 0.3s, ease-in-out);
@@ -70,6 +80,31 @@
 		background-color: $hover-bg-color;
 	}
 }
+
+@mixin solid-button($color, $hover-color, $bg-color, $hover-bg-color) {
+	@include transition(all, 0.3s, ease-in-out);
+	
+	color: $color;
+	background-color: $bg-color;
+	display: inline-block;
+	padding: 16px 32px;
+	
+	&:hover {
+		@include transition(all, 0.3s, ease-in-out);
+		
+		color: $hover-color;
+		background-color: $hover-bg-color;
+	}
+}
+
+
+/* =======[ misc ]======= */
+
+@mixin pointer {
+	cursor: hand;
+	cursor: pointer;
+}
+
 
 /* =======[ breakpoint ]======= */
 

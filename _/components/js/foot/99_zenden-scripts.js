@@ -19,14 +19,16 @@ $(function () {
 				$('.video').removeClass('video-expanded');
 			}
 		});
+		
 	}
 
-	console.log('initializing scripts...');
+	console.log('initializing scripts');
 	myInit();
 
 	$(window).on('statechangecomplete', function () {
 	// this code will run once the ajax load is complete between pages, reinitialize scripts here
-		console.log('page change occured...');
+		console.log('page change occured');
 		myInit();
+		
 	});
 });

@@ -1,0 +1,74 @@
+/*-------------------------------------------With Important Tags Removed -------------
+
+.logo {width:350px;}
+
+.content .video div.text-overlay p {font-size: 16px; color: #fff;}
+
+.content .video div.text-overlay a {letter-spacing: 1px; font-size: 15px;}
+
+.menu-trigger {font-size:0;}
+
+.menu-link {background-color:transparent;}
+
+.mp-menu h2 {font-size: 1.3rem; letter-spacing: 1px; padding: 21px 9px;color: rgba(0, 0, 0, 0.5); text-transform:uppercase;}
+
+.menu-trigger:before {width: 50px; height: 3px; box-shadow: 0 6px transparent, 0 10px #fff, 0 18px transparent, 0 20px #fff; left: 25px; top:25px; width: 50px;}
+
+.content .video a.video-ex {font-size: 1.1rem;top: 12px; right: 12px; width: 45px; height: 45px;background: rgba(0, 0, 0, 0.1);}
+
+button.trigger span:before {background: transparent url('img/down-arrow.svg') no-repeat top center;
+background-size: 100%; content:" ";}
+
+button.trigger {left: 49.41%;}
+
+img.menu-logo {width: 220px; margin: 5px 0 0 8px;}
+
+.mp-back {font-family: "nexa_boldregular", Helvetica, Arial, sans-serif; font-size: 0.9rem;}
+
+.mp-back::after {top: 13px; font-size: 1.1rem;}
+
+.content .two-column article.content-block {padding: 150px 64px 64px 64px;}
+
+.content article.content-block h1 {font-size: 2.1rem;letter-spacing: 1px;}
+
+hgroup.pagehead h2 {letter-spacing:1px;}
+
+*/
+
+
+
+
+.logo {width:350px !important;}
+
+.content .video div.text-overlay p {font-size: 16px !important; color: #fff !important;}
+
+.content .video div.text-overlay a {letter-spacing: 1px; font-size: 15px;}
+
+.menu-trigger {font-size:0 !important;}
+
+.menu-link {background-color:transparent !important;}
+
+.mp-menu h2 {font-size: 1.3rem !important; letter-spacing: 1px !important; padding: 21px 9px !important;color: rgba(0, 0, 0, 0.5) !important; text-transform:uppercase !important;}
+
+.menu-trigger:before {width: 50px !important; height: 3px !important; box-shadow: 0 6px transparent, 0 10px #fff, 0 18px transparent, 0 20px #fff !important; left: 25px !important; top:25px !important; width: 50px !important;}
+
+.content .video a.video-ex {font-size: 1.1rem !important;top: 12px !important; right: 12px !important; width: 45px !important; height: 45px !important;background: rgba(0, 0, 0, 0.1) !important;}
+
+button.trigger span:before {background: transparent url('img/down-arrow.svg') no-repeat top center !important;
+background-size: 100% !important; content:" " !important;}
+
+button.trigger {left: 49.41% !important;}
+
+img.menu-logo {width: 220px !important; margin: 5px 0 0 8px !important;}
+
+.mp-back {font-family: "nexa_boldregular", Helvetica, Arial, sans-serif !important; font-size: 0.9rem !important;}
+
+.mp-back::after {top: 13px !important; font-size: 1.1rem !important;}
+
+.content .two-column article.content-block {padding: 150px 64px 64px 64px !important;}
+
+.content article.content-block h1 {font-size: 2.1rem !important;letter-spacing: 1px !important;}
+
+hgroup.pagehead h2 {letter-spacing:1px !important;}
+
+

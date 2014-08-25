@@ -5,16 +5,15 @@
 		
 		<header>
 			<nav id="mp-menu" class="mp-menu">
-				<div class="mp-level">
-					<h2 class="icon icon-world">Zen Den Web Design</h2>
-					<ul>
-						<li><a class="fa fa-home outlink" href="index.php">Home</a></li>				
+				<div class="mp-level toplevel">
+					<h2><a class="outlink" href="index.php"><img class="menu-logo" src="img/zd-logo-dk.svg" alt="Zen Den Web Design"></a></h2>
+					<ul class="menugroup">				
 
 						<!-- Web Design -->
 						<li class="fa fa-angle-right">
-							<a class="fa fa-laptop" href="#">Web Design</a>
-							<div class="mp-level">
-								<h2 class="">Web Design</h2>
+							<a href="#"><i class="icon-webdesign"></i>Web Design</a>
+							<div class="mp-level webdesign">
+								<h2 class=""><i class="icon-webdesign"></i>Web Design</h2>
 								<a class="mp-back" href="#">back</a>
 								<ul>
 									<li><a class="outlink" href="content.php">Responsive Web Design</a></li>
@@ -33,9 +32,9 @@
 
 						<!-- eCommerce -->
 						<li class="fa fa-angle-right">
-							<a class="fa fa-credit-card" href="#">eCommerce</a>
-							<div class="mp-level">
-								<h2 class="icon icon-display">eCommerce</h2>
+							<a href="#"><i class="icon-ecommerce"></i>eCommerce</a>
+							<div class="mp-level ecommerce">
+								<h2><i class="icon-ecommerce"></i>eCommerce</h2>
 								<a class="mp-back" href="#">back</a>
 								<ul>
 									<li><a class="outlink" href="content.php">eCommerce Website Design</a></li>
@@ -54,9 +53,9 @@
 
 						<!-- SEO -->
 						<li class="fa fa-angle-right">
-							<a class="fa fa-search" href="#">SEO</a>
-							<div class="mp-level">
-								<h2 class="fa fa-search">SEO</h2>
+							<a href="#"><i class="icon-seo"></i>SEO Services</a>
+							<div class="mp-level seo">
+								<h2><i class="icon-seo"></i>SEO Services</h2>
 								<a class="mp-back" href="#">back</a>
 								<ul>
 									<li><a class="outlink" href="content.php">Search Engine Optimization (SEO)</a></li>
@@ -72,11 +71,21 @@
 						</li>
 						<!-- /SEO -->
 
-						<li><a class="fa fa-image" href="#">Portfolio</a></li>
-						<li><a class="fa fa-users" href="#">Team</a></li>
-						<li><a class="fa fa-pencil-square-o" href="#">Blog</a></li>
-						<li><a class="fa fa-file-text-o" href="#">Request a Quote</a></li>
-					</ul>							
+						<li><a href="#"><i class="icon-portfolio"></i>Portfolio</a></li>
+						<li><a href="#"><i class="icon-team"></i>Our Team</a></li>
+						<li><a href="#"><i class="icon-blog"></i>Blog &amp; News</a></li>
+					</ul>
+					
+					<div class="menu-bottom">
+						<a class="button" href="#">Request a Quote</a>
+						<ul class="social">
+							<li><a class="fa fa-google-plus" href="#"></a></li>
+							<li><a class="fa fa-facebook" href="#"></a></li>
+							<li><a class="fa fa-pinterest" href="#"></a></li>
+							<li><a class="fa fa-linkedin" href="#"></a></li>
+							<li><a class="fa fa-twitter" href="#"></a></li>
+						</ul>
+					</div>							
 				</div>
 			</nav>
 			<!-- /mp-menu -->
@@ -85,4 +94,4 @@
 		<div class="scroller"><!-- this is for emulating position fixed of the nav -->
        		<div class="scroller-inner">
        	
-       			<p class="menu-link"><a href="#" id="trigger" class="menu-trigger">Menu</a></p>
+       			<p class="menu-link"><a id="trigger" class="menu-trigger">Menu</a></p>
