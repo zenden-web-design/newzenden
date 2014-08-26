@@ -6,7 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 	<title>Homepage</title>
 	<link rel="stylesheet" href="_/css/styles.css">
-	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="clayton-styles.css">
+ 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,400italic' rel='stylesheet' type='text/css'>
 	<script src="_/js/head-script.js"></script>
 </head>
 <body class="home">
