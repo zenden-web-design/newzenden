@@ -27,7 +27,8 @@ html, body, .container, .scroller {
 }
 
 .menu-trigger {
-	@include font-size(.9);
+	/*@include font-size(.9);*/
+	@include font-size(0);
 	
 	position: relative;
     padding-left: 0;
@@ -47,12 +48,12 @@ html, body, .container, .scroller {
 
 .menu-trigger:before {
 	position: absolute;
-	top: 12px;
-    left: 15px;
-	width: 41px;
-	height: 6px;
+	top: 25px;
+    left: 25px;
+	width: 50px;
+	height: 3px;
 	background: #fff;
-	box-shadow: 0 6px transparent, 0 12px #fff, 0 18px transparent, 0 24px #fff;
+	box-shadow: 0 6px transparent, 0 10px #fff, 0 18px transparent, 0 20px #fff;
 	content: '';
 }
 
@@ -180,13 +181,15 @@ html, body, .container, .scroller {
 }
 
 .mp-menu h2 {
-	@include font-size(1.6);
+	@include font-size(1.3);
 	
 	margin: 0;
-	padding: 16px 9px;
-	color: rgba(0,0,0,0.4);
+	padding: 21px 9px;
+	color: rgba(0,0,0,0.5);
 	text-shadow: 0 0 1px rgba(0,0,0,0.1);
 	font-weight: 300;
+	letter-spacing: 1px;
+	text-transform: uppercase;
 }
 
 .mp-menu.mp-overlap h2::before {
@@ -300,7 +303,9 @@ html, body, .container, .scroller {
 } /* seems like Chrome 34.0.1847.131 needs the second shadow otherwise the transition breaks */
 
 .mp-back {
-	@include font-size(.8);
+	@include font-size(.9);
+	
+	font-family: $header-bold;
 	background: $green;
 	outline: none;
 	color: #fff;
@@ -320,11 +325,12 @@ html, body, .container, .scroller {
 }
 
 .mp-back::after {
-	@include font-size(1.3);
+	@include font-size(1.1);
 	
 	font-family: $icon;
 	position: absolute;
 	content: "\f0da";
+	top: 13px;
 	right: 10px;
 	color: rgba(0,0,0,0.3);
 }
@@ -360,7 +366,6 @@ html, body, .container, .scroller {
     position: fixed;
     left: 0;
     top: 0;
-    background: rgba(0,0,0,0.2);
     width: 70px;
     height: 70px;
     margin: 0;
@@ -385,7 +390,8 @@ html, body, .container, .scroller {
 	}
 }
 img.menu-logo {
-	width: 240px;
+	width: 220px;
+	margin: 5px 0 0 8px;
 }
 
 .mp-menu ul li .mp-level h2 i {

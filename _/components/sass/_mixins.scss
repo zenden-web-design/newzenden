@@ -65,6 +65,7 @@
 
 @mixin ghost-button($color, $hover-color, $hover-bg-color) {
 	@include transition(all, 0.3s, ease-in-out);
+	@include font-size(0.9375);
 	
 	color: $color;
 	border: 1px solid $color;
@@ -72,6 +73,7 @@
 	padding: 16px 32px;
 	text-transform: uppercase;
 	font-family: $header-bold;
+	letter-spacing: 1px;
 	
 	&:hover {
 		@include transition(all, 0.3s, ease-in-out);
@@ -83,6 +85,7 @@
 
 @mixin solid-button($color, $hover-color, $bg-color, $hover-bg-color) {
 	@include transition(all, 0.3s, ease-in-out);
+	@include font-size(0.9375);
 	
 	color: $color;
 	background-color: $bg-color;

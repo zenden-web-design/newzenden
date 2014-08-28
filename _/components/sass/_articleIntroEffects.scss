@@ -142,11 +142,13 @@ button.trigger span:before {
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
-	content: "\f107";
+	content: '';
 	line-height: 1;
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background: transparent url('../../img/down-arrow.svg') no-repeat top center;
+	background-size: 100%; 
 }
 
 /* Conent */

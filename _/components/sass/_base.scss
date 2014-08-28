@@ -60,6 +60,7 @@ hgroup.pagehead {
 		@include font-size(.8);
 		
 		font-family: $header-light;
+		letter-spacing: 1px;
 		color: lighten($bodytext, 40);
 		margin-top: -10px;
 		display: inline-block;
@@ -86,8 +87,9 @@ hgroup.pagehead {
 	
 	article.content-block {
 		h1 {
-			@include font-size(2.3);
+			@include font-size(2.1);
 			
+			letter-spacing: 1px;
 			color: $bodytext;
 		}
 		p {
@@ -180,7 +182,7 @@ hgroup.pagehead {
 			@include content-column-right;
 
 			height: 100%;
-			padding: 64px;
+			padding: 150px 64px 64px;
 			overflow-x: hidden;
 			overflow-y: scroll;
 			
@@ -228,14 +230,14 @@ hgroup.pagehead {
 		display: table;
 
 		a.video-ex {
-			@include font-size(1.6);
+			@include font-size(1.1);
 			
 			position: absolute;
-			top: 0;
-			right: 0;
-			width: 70px;
-			height: 70px;
-			background: rgba(0,0,0,0.2);
+			top: 12px;
+			right: 12px;
+			width: 45px;
+			height: 45px;
+			background: rgba(0,0,0,0.1);
 			border: none;
 			color: $light;
 			text-align: center;
@@ -269,15 +271,15 @@ hgroup.pagehead {
 			
 
 			img.logo {
-				width: 400px;
+				width: 350px;
 				margin-bottom: 20px;
 			}
 			p {
-				@include font-size(1.3);
+				@include font-size(1);
 				
 				font-weight: 300;
 				line-height: 1.7;
-				color: darken($light, 20%);
+				color: $white;
 				padding-bottom: 48px;
 				width: 600px;
 				margin: 0 auto;
